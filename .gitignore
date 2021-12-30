@@ -2,5 +2,6 @@ Figures/*
 dataFiles/*
 dataFiles/Analysis/*
 .idea/*
+.idea
 
 !dataFiles/Swarocski.csv
