@@ -1,3 +1,9 @@
+# merges existing Data, and 0 value dataset from main.py to one DF
+# groups data by ['Material', 'Month', 'Year' ] and sums up all values
+# -> this gives total sales
+#
+import os
+
 import pandas as pd
 import numpy as np
 
@@ -36,6 +42,9 @@ fullDf['Order COGS'].astype('int64', errors='ignore', copy=False)
 print(fullDf.columns)
 print(fullDf.dtypes)
 
+# TODO: consider different solution for: Item;Productkey;Size;Colour;Foiling;Effect;Lead Time;Month;Year;Day;Date
+# sums up all values to get totoal of whole month per Material
+# current solution just makes sense for: Order Qty;Order COGS
 fullDf = fullDf.groupby(by=['Material', 'Month', 'Year' ]).sum()
 print(fullDf.columns)
 #[5 707 752 rows x 16 columns]
@@ -43,3 +52,5 @@ print(fullDf)
 #Save file
 fullDf.to_csv('dataFiles/FinalAnalysisData.csv')
 
+# execute insertExistingData.py file
+os.system("VarianzAnalyse.py")

@@ -1,14 +1,15 @@
+# splits by coefficent of variation and makes graphs based on predefined groups
+#
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
 
 # einlesen der Daten
 df = pd.read_csv('dataFiles/Analysis/MaterialVarianceOrderQty.csv',
                  sep=",",
                  header=0,
                  low_memory = False)
-
 df.reset_index()
 
 # [28950 rows x 4 columns]

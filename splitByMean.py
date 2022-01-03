@@ -1,3 +1,7 @@
+# splits by mean and makes graphs based on predefined groups
+#
+#
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -10,6 +14,7 @@ df = pd.read_csv('dataFiles/Analysis/MaterialVarianceOrderQty.csv',
                  low_memory = False)
 
 df.reset_index()
+print(df)
 
 # [28950 rows x 4 columns]
 lumpyData = df.loc[df['mean'] == 0]
