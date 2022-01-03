@@ -5,3 +5,6 @@ dataFiles/Analysis/*
 .idea
 
 !dataFiles/Swarocski.csv
+!Figures
+!Figures/VisualSplit
+!dataFiles
